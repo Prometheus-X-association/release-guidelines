@@ -77,7 +77,7 @@ To establish measurable criteria that will indicate the successful interoperabil
 A well-documented set of success metrics that provide clear and measurable criteria for evaluating the interoperability between Component A and Component B. These metrics ensure that the components not only interact but do so in a way that meets or exceeds the desired levels of performance, reliability, and user satisfaction.
 
 **Process**
-- Workshop - 1 hour between component leaders and stakeholders
+- Asynchronous communication between component leads and stakeholders.
 
 
 ### Running Interoperability Tests
@@ -192,7 +192,7 @@ Automated and triggered by Github Actions.
 * **Component Leads (CL)**: From the component teams, owns the component, product manager/owner. 
 * **Component Test Engineers (CTE)**: From the component teams, may be a developer or QA ; write and validate tests and support sandbox deployement.
 * **Prometheus Architects (PA)**: Manage the sandbox environment for integration testing, support for scenarii and testing.
-* **Stakeholders (SH)**: Includes members of the technical committee, end user organizations, cloud providers. May validate interoperability scenarii and success metrics
+* **Stakeholders (SH)**: Includes members of the technical committee, end user organizations, cloud providers. Validate interoperability scenarii and success metrics.
 
 
 ## RACI Matrix
@@ -204,22 +204,22 @@ Automated and triggered by Github Actions.
 | - Document scenario details                           | A  | R   | I  | C  |
 | - Prioritize scenarios                                | A  | C   | I  | R  |
 | **Defining Success Metrics**                          |    |     |    |    |
-| - Identify metrics for scenarios                      | I  | R   | C  | A  |
-| - Define thresholds for success                       | I  | R   | C  | A  |
-| - Document and communicate metrics                    | C  | R   | I  | A  |
+| - Identify metrics for scenarios                      | A  | R   | C  | I  |
+| - Define thresholds for success                       | A  | R   | C  | I  |
+| - Document and communicate metrics                    | A  | R   | I  | I  |
 | **Running Interoperability Tests**                    |    |     |    |    |
 | - Define test schedules                               | A  | R   | C  | I  |
 | - Execute tests                                       | A  | R   | C  | I  |
 | - Analyze test results                                | A  | R   | C  | I  |
-| - Document issues and findings                        | I  | R   | C  | A  |
+| - Document issues and findings                        | I  | R/A   | C  | I   |
 | - Validate test outcomes against success metrics      | I  | R   | C  | A  |
 | **Building Interoperability Sandbox**                 |    |     |    |    |
 | - Identify required components and resources          | C  | R   | A  | I  |
-| - Set up test environment                             | I  | R   | A  | C  |
-| - Verify environment setup with initial tests         | I  | R   | A  | C  |
+| - Set up test environment                             | C  | R   | A  | I  |
+| - Verify environment setup with initial tests         | C  | R   | A  | I  |
 | **Maintaining Interoperability Sandbox**              |    |     |    |    |
-| - Monitor sandbox health                              | I  | C   | A  | R  |
-| - Update components and configurations as needed      | I  | R   | A  | C  |
+| - Monitor sandbox health                              | I  | C   | A/R  | I  |
+| - Update components and configurations as needed      | I  | R   | A  | I  |
 | - Report and escalate issues                          | C  | R   | A  | I  |
 
 * **R (Responsible)**: Person or role who performs the task.
