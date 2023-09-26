@@ -2,6 +2,17 @@
 
  This documentation is to guide teams through releasing code on the `https://github.com/Prometheus-X-association/` GitHub account, ensuring best practices are maintained throughout the lifecycle of the project.
 
+#### Release process diagram ####
+
+![Release process diagram](ptx-architecture-diagram.png)
+
+APIs are defined using OpenAPI.
+Components are delivered as docker images, stored in a private registry operated by Prometheus X.
+Orchestration is provided as a `docker-compose.yml` file for integration and interoperability tests. This file includes all dependencies. Components should not rely on managed components (such as a Relational Database Service).
+CI/CD is provided by Github Actions. Sample actions are provided in this repository.
+Functional and integration tests are described as  [K6](https://k6.io) scenarii.
+
+
 **1. Releasing Code**
 
 * **Repository Creation**: Contact Eric to create the appropriate repositories for your projects in  [GitHub Prometheus X Organization](https://github.com/Prometheus-X-association/).
@@ -94,7 +105,11 @@ Adopt [Semantic Versioning (SemVer)](https://semver.org/). This includes version
 
 * **Automated Testing**: Every pull request or merge should automatically trigger a suite of tests to ensure code quality. Integrate with Github Actions for triggering tests. 
 
-* **Deployment**: Integrate with Github Actions to automatically build artefacts.
+* **Building**: Integrate with Github Actions to automatically build artefacts.
+
+* **Triggers**: For each push on the component repository :
+  - on the main branch, a beta image is built and pushed to the Prometheux X registry.
+  - with a tag in semver format, the image is built, tagged both with version and `latest` and pushed to the Prometheus X registry
 
 * **Self-hosted runners**: Github Actions self-hosted runner capacity can be provided upon request.
 
