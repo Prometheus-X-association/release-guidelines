@@ -192,7 +192,7 @@ Automated and triggered by Github Actions.
 * **Component Leads (CL)**: From the component teams, owns the component, product manager/owner. 
 * **Component Test Engineers (CTE)**: From the component teams, may be a developer or QA ; write and validate tests and support sandbox deployement.
 * **Prometheus Architects (PA)**: Manage the sandbox environment for integration testing, support for scenarii and testing.
-* **Stakeholders (SH)**: Includes members of the technical committee, end user organizations, cloud providers. Validate interoperability scenarii and success metrics.
+* **Stakeholders (SH)**: Prometheus X technical committee and interested parties. They validate the results within 15 days after notification.
 
 
 ## RACI Matrix
@@ -200,9 +200,9 @@ Automated and triggered by Github Actions.
 | Tasks/Roles                                           | CL | CTE | PA | SH |
 |-------------------------------------------------------|----|-----|----|----|
 | **Defining Interoperability Scenarios**               |    |     |    |    |
-| - Identify relevant scenarios                         | A  | C   | I  | R  |
-| - Document scenario details                           | A  | R   | I  | C  |
-| - Prioritize scenarios                                | A  | C   | I  | R  |
+| - Identify relevant scenarios                         | R/A  | C   | C  | I  |
+| - Document scenario details                           | A  | R   | C  | I  |
+| - Prioritize scenarios                                | R/A  | C   | C  | I  |
 | **Defining Success Metrics**                          |    |     |    |    |
 | - Identify metrics for scenarios                      | A  | R   | C  | I  |
 | - Define thresholds for success                       | A  | R   | C  | I  |
