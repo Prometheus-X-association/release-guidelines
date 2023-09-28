@@ -18,8 +18,8 @@ Scenarii defined for functional testing should used foundations for [interoperab
 
 * **Automated Scenarii:**
     * Defined in GitHub repositories as code.
-    * GitHub Actions will be used to instantiate test environments.
-    * k6 will be employed as the load testing tool to simulate user behavior and validate the functionality under stress.
+    * GitHub Actions will be used to instantiate test environments using docker-compose.yml in the repository, and load data used in the test environment
+    * k6 will be employed as the client tool to simulate user behavior with various levels of traffic and generate reports.
     * These tests should include setup, execution, and teardown phases.
 
 * **Manual Testing:**
