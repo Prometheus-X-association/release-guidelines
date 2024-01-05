@@ -1,12 +1,42 @@
-### Recommendation for OpenSourcing Components within the Prometheus X Ecosystem
+### Recommendation for OpenSourcing Components within the Prometheus X Ecosystem ###
 
- This documentation is to guide teams through releasing code on the `https://github.com/Prometheus-X-association/` GitHub account, ensuring best practices are maintained throughout the lifecycle of the project.
+#### Prometheus X Delivery Overview and Philosophy ####
+Prometheus X aims to build and maintain open source building blocks for 
+ * operating ecosystems with a focus on education and skills data and services
+ * facilitating access and integration for participants of those ecosystems.
+
+These building blocks are developed by partner companies recognized for their expertise. In some cases, the partner opens source existing components and services part of their existing commercial offering.
+
+In other cases, the partner designs and develop a new component which they may use as part of their commercials offering.
+
+Prometheus X intends to provide stewardship and funding of these buildings blocks, and does not intend to operate these services.
+
+To build a thriving community, it is important that :
+ * The building blocks can be used without intellectual property limitations (data or code) from the partner
+ * Building blocks should only depend on open source software and data
+ * Building blocks may provide integration with intellectual property (data or code) from the partner if an open alternative is provided and as long as it can provide value without said intellectual property
+
+A component delivery by a partner should comprise:
+ * The list of repositories to be provided on the Github Prometheus X account.
+
+For each of these repositories, Prometheus X :
+ * License under which the code is released (MIT or equivalent)
+ * Name and description of services and components included in the repository,
+ * Description of dependencies : technology stack, integrated API, datasets, required to operate the building block
+
+This information can be provided as an architecture diagram as long as this information is represented.
+
+It should be noted that delivery should also include Dockerfiles to build container images and docker-compose.yml (and/or K8S deployment descriptors, Helm charts etc) and instructions in markdown form to test and operate the building blocks.
+
+The documentation may identify the partner in charge of the building block as a note in the README.md,  it should however recognize first and foremost that it is a Prometheus X building block, reinforcing brand recognition.
+
+This documentation is to guide teams through releasing code on the `https://github.com/Prometheus-X-association/` GitHub account, ensuring best practices are maintained throughout the lifecycle of the project.
 
 #### Release process diagram ####
 
 ![Release process diagram](ptx-architecture-diagram.png)
 
-APIs are defined using OpenAPI.
+APIs are defined using OpenAPI or GraphQL.
 Components are delivered as docker images, stored in a private registry operated by Prometheus X.
 Orchestration is provided as a `docker-compose.yml` file for integration and interoperability tests. This file includes all dependencies. Components should not rely on managed components (such as a Relational Database Service).
 CI/CD is provided by Github Actions. Sample actions are provided in this repository.
