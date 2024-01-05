@@ -1,12 +1,12 @@
-# Functional testing process
+# Interoperability/integration testing process
 
 ## Introduction
-Black box functional testing is used to validate Prometheus X components.
-Those tests should be designed to be automated.
+Prometheus components are building blocks to a data space for education and skills.
+They are made to work together, although they are built by different teams and different timelines.
 
 ## Tasks
 
-### Defining Scenarios
+### Defining Interoperability Scenarios
 
 **Objective**: 
 To identify, document, and prioritize scenarios where Component A and Component B need to interact, ensuring that they can effectively communicate, exchange data, and execute joint processes without any hindrance or error.
